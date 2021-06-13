@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+
+  app:
+    build: .
+    environment:
+      - APP_ENV
+      - DATABASE_HOST
+      - DATABASE_PORT
+      - DATABASE_NAME
+      - DATABASE_USERNAME
+      - DATABASE_PASSWORD
+    ports:
+      - 8080:8080
+    depends_on:
+      - database
+
+  database:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: ${DATABASE_NAME}
+      MYSQL_USER: ${DATABASE_USERNAME}
+      MYSQL_PASSWORD: ${DATABASE_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+    volumes:
+      - datadir:/var/lib/mysql
+    restart: always
+
+volumes:
+  datadir:
