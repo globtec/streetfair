@@ -6,4 +6,5 @@ public interface FairRepository {
 
     Fair save(Fair fair);
 
+    void deleteById(String registry);
 }
