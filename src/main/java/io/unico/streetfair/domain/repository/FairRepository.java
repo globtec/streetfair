@@ -1,4 +1,4 @@
-package io.unico.streetfair.repository;
+package io.unico.streetfair.domain.repository;
 
 import io.unico.streetfair.domain.entity.Fair;
 

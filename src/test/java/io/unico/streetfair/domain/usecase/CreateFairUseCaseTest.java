@@ -1,7 +1,7 @@
-package io.unico.streetfair.usecase;
+package io.unico.streetfair.domain.usecase;
 
 import io.unico.streetfair.domain.entity.Fair;
-import io.unico.streetfair.repository.FairRepository;
+import io.unico.streetfair.domain.repository.FairRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

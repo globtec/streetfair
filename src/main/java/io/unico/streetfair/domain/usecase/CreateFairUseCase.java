@@ -1,7 +1,7 @@
-package io.unico.streetfair.usecase;
+package io.unico.streetfair.domain.usecase;
 
 import io.unico.streetfair.domain.entity.Fair;
-import io.unico.streetfair.repository.FairRepository;
+import io.unico.streetfair.domain.repository.FairRepository;
 
 public class CreateFairUseCase {
 
