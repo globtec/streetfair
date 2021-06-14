@@ -41,4 +41,8 @@ public class Fair {
 
     private String landmark;
 
+    public String getRegistry() {
+        return registry;
+    }
+
 }
