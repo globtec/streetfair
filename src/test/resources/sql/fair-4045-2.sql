@@ -1,0 +1,38 @@
+INSERT INTO `fair`
+    (
+        `id`,
+        `lat`,
+        `lon`,
+        `setcems`,
+        `weighting_area`,
+        `district_code`,
+        `district`,
+        `subprefecture_code`,
+        `subprefecture`,
+        `region5`,
+        `region8`,
+        `name`,
+        `registry`,
+        `address`,
+        `number`,
+        `neighborhood`,
+        `landmark`
+    ) VALUES (
+        '2',
+        '-46574716',
+        '-23584852',
+        '355030893000035',
+        '3550308005042',
+        '95',
+        'VILA PRUDENTE',
+        '29',
+        'VILA PRUDENTE',
+        'Leste',
+        'Leste 1',
+        'PRACA SANTA HELENA',
+        '4045-2',
+        'RUA JOSE DOS REIS',
+        '909.000000',
+        'VL ZELINA',
+        'RUA OLIVEIRA GOUVEIA'
+    );

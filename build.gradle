@@ -2,6 +2,9 @@ plugins {
 	id 'org.springframework.boot' version '2.5.1'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'jacoco'
+	id 'net.saliman.cobertura' version '4.0.0'
+	id 'com.github.kt3k.coveralls' version '2.12.0'
 }
 
 group = 'io.unico'
@@ -25,4 +28,19 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+}
+
+cobertura.coverageFormats = ['html', 'xml'] // coveralls plugin depends on xml format report
+
+jacoco {
+	toolVersion = "0.8.7"
+	reportsDirectory = layout.buildDirectory.dir('reports/jacoco')
+}
+
+jacocoTestReport {
+	reports {
+		xml.required = true
+		csv.required = false
+		html.outputLocation = layout.buildDirectory.dir('reports/jacoco/html')
+	}
 }

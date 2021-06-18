@@ -34,26 +34,32 @@ class UpdateFairUseCaseTest {
     @Test
     @DisplayName("Should update the fair when the fair exists")
     void shouldUpdateFairWhenFairExists() throws FairNotFoundException {
-        when(fairRepository.exists(fair)).thenReturn(true);
+        var registry = "registry";
+
+        when(fair.getRegistry()).thenReturn(registry);
+        when(fairRepository.existsByRegistryCustomQuery(registry)).thenReturn(true);
         when(fairRepository.save(fair)).thenReturn(fair);
 
         var fairUpdated = updateFairUseCase.update(fair);
 
-        verify(fairRepository).exists(fair);
+        verify(fairRepository).existsByRegistryCustomQuery(registry);
         verify(fairRepository).save(fair);
 
-        assertThat(fair).isEqualTo(fairUpdated);
+        assertThat(fairUpdated).isEqualTo(fair);
     }
 
     @Test
     @DisplayName("Should throw an exception when updating a fair that does not exist")
     void shouldThrowFairNotFoundExceptionWhenFairNotExists() {
         assertThrows(FairNotFoundException.class, () -> {
-            when(fairRepository.exists(fair)).thenReturn(false);
+            var registry = "registry";
 
-            var fairUpdated = updateFairUseCase.update(fair);
+            when(fair.getRegistry()).thenReturn(registry);
+            when(fairRepository.existsByRegistryCustomQuery(registry)).thenReturn(false);
 
-            verify(fairRepository).exists(fair);
+            updateFairUseCase.update(fair);
+
+            verify(fairRepository).existsByRegistryCustomQuery(registry);
             verify(fairRepository, never()).save(fair);
         });
     }

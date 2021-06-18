@@ -1,0 +1,38 @@
+INSERT INTO `fair`
+    (
+        `id`,
+        `lat`,
+        `lon`,
+        `setcems`,
+        `weighting_area`,
+        `district_code`,
+        `district`,
+        `subprefecture_code`,
+        `subprefecture`,
+        `region5`,
+        `region8`,
+        `name`,
+        `registry`,
+        `address`,
+        `number`,
+        `neighborhood`,
+        `landmark`
+    ) VALUES (
+        '3',
+        '-46610332',
+        '-23536131',
+        '355030810000027',
+        '3550308005005',
+        '10',
+        'BRAS',
+        '25',
+        'MOOCA',
+        'Leste',
+        'Leste 1',
+        'CONCORDIA',
+        '4003-7',
+        'RUA SAMPSON C MENDES JUNIOR',
+        'S/N',
+        'BRAS',
+        'TV RUA BRESSER'
+    );

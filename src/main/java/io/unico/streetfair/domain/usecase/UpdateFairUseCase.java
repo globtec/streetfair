@@ -13,7 +13,7 @@ public class UpdateFairUseCase {
     }
 
     public Fair update(Fair fair) throws FairNotFoundException {
-        if (fairRepository.exists(fair)) {
+        if (fairRepository.existsByRegistryCustomQuery(fair.getRegistry())) {
             return fairRepository.save(fair);
         }
 

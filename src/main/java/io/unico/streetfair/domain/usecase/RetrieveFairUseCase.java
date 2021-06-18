@@ -15,7 +15,7 @@ public class RetrieveFairUseCase {
     }
 
     public Fair find(String registry) throws FairNotFoundException {
-        Fair fair = fairRepository.find(registry);
+        Fair fair = fairRepository.findByRegistry(registry);
 
         if (null == fair) {
             throw new FairNotFoundException(String.format(
@@ -28,9 +28,9 @@ public class RetrieveFairUseCase {
 
     public List<Fair> findBy(String district,
                              String region5,
-                             String fairName,
+                             String name,
                              String neighborhood) {
-        return fairRepository.findBy(district, region5, fairName, neighborhood);
+        return fairRepository.findBy(district, region5, name, neighborhood);
     }
 
 }

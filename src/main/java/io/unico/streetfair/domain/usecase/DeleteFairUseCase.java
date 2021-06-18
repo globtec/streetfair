@@ -11,7 +11,7 @@ public class DeleteFairUseCase {
     }
 
     public void delete(String registry) {
-        fairRepository.deleteById(registry);
+        fairRepository.deleteByRegistry(registry);
     }
 
 }

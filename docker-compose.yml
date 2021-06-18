@@ -28,7 +28,9 @@ services:
     expose:
       - 3306
     volumes:
-      - datadir:/var/lib/mysql
+      - ./database:/docker-entrypoint-initdb.d
+      - ./data/DEINFO_AB_FEIRASLIVRES_2014.csv:/data/fair.csv
+      - ./csv-to-db.sh:/csv-to-db.sh
     restart: always
 
 volumes:

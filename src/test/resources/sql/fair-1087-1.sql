@@ -1,0 +1,38 @@
+INSERT INTO `fair`
+    (
+        `id`,
+        `lat`,
+        `lon`,
+        `setcems`,
+        `weighting_area`,
+        `district_code`,
+        `district`,
+        `subprefecture_code`,
+        `subprefecture`,
+        `region5`,
+        `region8`,
+        `name`,
+        `registry`,
+        `address`,
+        `number`,
+        `neighborhood`,
+        `landmark`
+    ) VALUES (
+        '6',
+        NULL,
+        NULL,
+        '355030858000074',
+        '3550308005216',
+        '59',
+        'PEDREIRA',
+        '16',
+        'CIDADE ADEMAR',
+        'Sul',
+        'Sul 2',
+        'MAR PAULISTA',
+        '1087-1',
+        'RUA AUGUSTO DE CASTRO',
+        '74.000000',
+        'PEDREIRA',
+        'ESTRADA DO ALVARENGA'
+    );
