@@ -83,13 +83,14 @@ docker-compose logs -f app
 
 ## Cobertura de testes do projeto
 
+Execute a seguinte instrução para criar o relatório de cobertura de testes do projeto:
 ```
 docker container run --rm -it \
     -v "${PWD}":/home/gradle \
     gradle:7.0.2-jdk11 gradle test jacocoTestReport
 ```
 
-Neste ponto, será disponibilizado em seu ambiente local o relatório no seguinte diretório:
+Neste ponto, será disponibilizado em seu ambiente local o relatório no seguinte caminho:
 
 ```
 build/reports/jacoco/html/index.html 
@@ -97,7 +98,7 @@ build/reports/jacoco/html/index.html
 
 ## Maturidade da API
 
-O projeto é uma API RESTful que contempla o nível mais alto de maturidadeo desenvolvida por Leonard Richardson.
+O projeto é uma API RESTful que contempla o nível mais alto de maturidade segundo o modelo desenvolvido por Leonard Richardson.
 
 Saiba mais:
 
