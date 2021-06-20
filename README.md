@@ -1,6 +1,7 @@
 # streetfair
 
 [![Build Status](https://travis-ci.com/globtec/streetfair.svg?branch=master)](https://travis-ci.com/globtec/streetfair)
+[![Coverage Status](https://coveralls.io/repos/github/globtec/streetfair/badge.svg)](https://coveralls.io/github/globtec/streetfair)
 
 O projeto `streetfair` é uma API RESTful para manipular os dados das feiras de São Paulo.
 
@@ -85,7 +86,8 @@ docker-compose logs -f app
 
 ## Cobertura de testes do projeto
 
-Execute a seguinte instrução para criar o relatório de cobertura de testes do projeto:
+Você pode visualizar a cobertura do projeto na ferramenta [Coveralls](https://coveralls.io/github/globtec/streetfair) ou executando a seguinte instrução para criar o relatório em seu ambiente local:
+
 ```
 docker container run --rm -it \
     -v "${PWD}":/home/gradle \
@@ -97,6 +99,8 @@ Neste ponto, será disponibilizado em seu ambiente local o relatório no seguint
 ```
 build/reports/jacoco/html/index.html 
 ```
+
+Neste ponto, você pode abrir o arquivo `index.html` em seu _browser_.
 
 ## Maturidade da API
 
