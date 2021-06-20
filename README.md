@@ -1,5 +1,7 @@
 # streetfair
 
+[![Build Status](https://travis-ci.com/globtec/streetfair.svg?branch=master)](https://travis-ci.com/globtec/streetfair)
+
 O projeto `streetfair` é uma API RESTful para manipular os dados das feiras de São Paulo.
 
 ## Pré-requisitos
